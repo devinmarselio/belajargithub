@@ -1,6 +1,11 @@
 .topnav {
+  display: flex;
   overflow: hidden;
   background-color: bisque;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 .topnav a {
@@ -10,6 +15,12 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  border-radius: 10px;
+  background-color: aquamarine;
+  transition: 0.3s ease-in-out;
+  margin-left: 20px;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .topnav a:hover {
