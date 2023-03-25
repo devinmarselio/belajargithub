@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JavaScript</title>
+    <script type="text/javascript">
+      document.write("<h1>Hello World</h1>");
+      document.write("<h2 style='color:red';>JavaScript</h2>");
+      var a = "Universitas MDP";
+      var b = 20;
+      var c = true;
+      document.write("A = " + a + "<br>");
+      document.write("B = " + b);
+      console.log("Nilai A = " + a);
+      console.log("Nilai B = " + b);
+      console.log("Nilai C = " + c);
+      console.log("Tipe Data Variabel A = " + typeof a);
+      console.log("Tipe Data Variabel B = " + typeof b);
+      console.log("Tipe Data Variabel C = " + typeof c);
+      document.write("<br>");
+      // Operator Aritmatika
+      var i = 10;
+      var j = 50;
+      document.write("i = " + i + "<br>");
+      document.write("j = " + j + "<br>");
+      document.write("i + j = " + (i + j));
+      document.write("<br>");
+      document.write("i mod j = " + (i % j));
+      document.write("<br>");
+      document.write("++i = " + ++i);
+      document.write("<br>");
+      document.write("++i = " + ++i);
+      document.write("<br>");
+      document.write("++i = " + ++i);
+      document.write("<br>");
+      document.write("--i = " + --i);
+      document.write("<br>");
+      document.write("--i = " + --i);
+      document.write("<br>");
+      document.write("--i = " + --i);
+
+      if (i < j) {
+        document.write("<br>");
+        document.write("i < j");
+      } else {
+        document.write("<br>");
+        document.write("i > j");
+      }
+      document.write("<br>");
+      var colors = ["blue", "red", "yellow"];
+      var colors2 = new Array("white", "red", "custom");
+      document.write(colors[0] + " " + colors2[0]);
+      //tampilkan array dengan menggunakan metode for (perulangan)
+      for (var i = 0; i < colors.length; ++i ){
+        document.write("<br><colors style='color="+colors[i]+"'>"+colors[i]);
+      }
+
+      for (var i = 0; i <= 10; i++) {
+        if (i == 8) {
+          console.log("Nilai 8");
+          break;
+        }
+        console.log("Nilai i = " + i);
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>Belajar JavaScript Dasar</h1>
+  </body>
+</html>
