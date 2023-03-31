@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function tampilPesan() {
+        return "Universitas MDP";
+      }
+      function kali(bil1, bil2) {
+        return bil1 * bil2;
+      }
+      function pesan1() {
+        alert("Pesan Hello World");
+      }
+      function pesan2(nama) {
+        alert("Selamat Datang, " + nama);
+      }
+      function pesan3() {
+        var nilai = prompt("Silahkan Masukkan Nilai !");
+      }
+      function konfirmasi() {
+        let text;
+        if (confirm("Press a button!") == true) {
+          text = "You pressed OK!";
+        } else {
+          text = "You canceled!";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </head>
+  <body onload="pesan1()">
+    <script type="text/javascript">
+      document.write(tampilPesan());
+      document.write("<br>");
+      document.write(kali(2, 4));
+    </script>
+
+    <form>
+      <input type="button" value="PANGGIL PESAN 1" onclick="pesan1()" />
+      <input type="button" value="PANGGIL PESAN 2" onclick="pesan2('Devin')" />
+      <input type="button" value="PANGGIL PESAN 3" onclick="pesan3()" />
+      <input type="button" value="PANGGIL KONFIRMASI" onclick="konfirmasi()" />
+    </form>
+
+    <p id="demo">...</p>
+
+    <p id="kalimat">Pengembangan Aplikasi Web !</p>
+    <button
+      onclick="document.getElementById('kalimat').innerHTML = 'Hello Javascript'"
+    >
+      Ubah html
+    </button>
+
+    <button
+      onclick="document.getElementById('kalimat').style.fontSize = '30px'"
+    >
+      Ubah Font Size
+    </button>
+
+    <button onclick="document.getElementById('kalimat').style.display = 'none'">
+      HIDE
+    </button>
+    <button
+      onclick="document.getElementById('kalimat').style.display = 'block'"
+    >
+      VISIBLE
+    </button>
+  </body>
+</html>
