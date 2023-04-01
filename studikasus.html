@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Nama : <input type="text" id="nama" /><br /><br />
+    Biaya Jasa : <input type="number" id="biayajasa" /><br /><br />
+    Biaya Sparepart : <input type="number" id="biayasparepart" /><br /><br />
+    Kode Member : <input type="text" id="kodemember" />
+    <hr />
+    <button id="hitung" onclick="hitungSubTotal()">Hitung Sub Total</button>
+
+    <p id="tampilsubtotal">Sub Total:</p>
+    <p id="tampilnilaidiskon">Diskon :</p>
+    <p id="tampilketerangan">Keterangan :</p>
+    <p id="tampildpp">DPP (Dasar Pengenaan Pajak) :</p>
+    <p id="tampilppn">PPN :</p>
+    <p id="tampilgrandtotal">Grand Total :</p>
+
+    <script type="text/javascript">
+      function hitungSubTotal() {
+        var biayajasa = document.getElementById("biayajasa").value;
+        var biayasparepart = document.getElementById("biayasparepart").value;
+        var kodemember = document.getElementById("kodemember").value;
+        subTotal = parseInt(biayajasa) + parseInt(biayasparepart);
+        if (kodemember == "B") {
+          diskon = 0.25;
+          keterangan = "Member, Pelanggan Baru";
+          nilaiDiskon = subTotal * diskon;
+          dpp = subtotal - nilaiDiskon;
+          ppn = dpp * 0.1;
+          grandTotal = dpp + ppn;
+        } else if (kodemember == "M") {
+          diskon = 0.2;
+          keterangan = "Member Lama";
+          nilaiDiskon = subTotal * diskon;
+          dpp = subtotal - nilaiDiskon;
+          ppn = dpp * 0.1;
+          grandTotal = dpp + ppn;
+        } else if (kodemember == "N") {
+          diskon = 0.1;
+          keterangan = "Non Member";
+          nilaiDiskon = subTotal * diskon;
+          dpp = subtotal - nilaiDiskon;
+          ppn = dpp * 0.1;
+          grandTotal = dpp + ppn;
+        }
+        document.getElementById("tampilsubtotal").innerHTML = subTotal;
+        document.getElementById("tampilnilaidiskon").innerHTML = nilaiDiskon;
+        document.getElementById("tampilketerangan").innerHTML = keterangan;
+        document.getElementById("tampildpp").innerHTML = dpp;
+        document.getElementById("tampilppn").innerHTML = ppn;
+        document.getElementById("tampilgrandtotal").innerHTML = grandTotal;
+      }
+    </script>
+  </body>
+</html>
